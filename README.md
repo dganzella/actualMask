@@ -37,7 +37,7 @@ img:setMaskImage(mask)
 
 <img alt="wtf" src="readmeImgs/image2.png" width="200" height="200">
 
-So what happened? Although the body and feet from the stickman are not drawn as expected, there is now a black background to the head! We do not want that, since the source image did not have any pixels set there.
+So what happened? Although the body and feet from the stickman are not drawn as expected, there is now a black background besides the head! We do not want that, since the source image did not have any pixels set there.
 
 Why does this happen? No Idea. But thats not what I expect from masking at all, that is for sure.
 
