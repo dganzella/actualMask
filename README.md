@@ -22,7 +22,7 @@ end
 ## problem
 although playdate SDK images support image masking with the method [setMaskImage](https://sdk.play.date/inside-playdate/#m-graphics.image.setMaskImage), there seems to be a problem -- it will override the resulting masked-image with black even if the souce of the image is transparent
 
-<img alt="logic" src="readmeImgs/logic.png" width="256" height="224">
+<img alt="logic" src="readmeImgs/logic.png" width="384" height="336">
 
 ## solution
 
