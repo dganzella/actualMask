@@ -1,8 +1,5 @@
 # actualMask
-adds the ability to set an actual image Mask on Playdate -- an image mask that behaves like what is expected from an image mask
-
-(works similar to masking in unity/cocos/photoshop or any other software that has masks)
-
+adds the ability to set an actual image Mask on Playdate -- works similar to masking in unity/cocos/photoshop and I guess most softwares that use masks
 ## installation
 
 just copy source/actualMask.lua in your project, or the code below
