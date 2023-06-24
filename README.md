@@ -12,7 +12,7 @@ let's start by having a simple stickman being drawn in front of a diagonal patte
 
 ![stickman](readmeImgs/image8.png)
 
-<img src="/dganzella/actualMask/raw/main/readmeImgs/image8.pnge" width="100" height="100">
+<img src="readmeImgs/image8.pnge" width="100" height="100">
 
 ```lua
 img = gfx.image.new('assets/images/stickman')
