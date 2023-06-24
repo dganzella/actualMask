@@ -72,3 +72,12 @@ setAnActualMaskToImage(img, mask)
 Awesome! this is how masks are supposed to work!
 
 ## how Does actualMask work?
+
+we begin by making a copy of the original mask, add it to a context in order to draw inside it, then draw the source image on it but with kDrawModeFillBlack, this is the resulting image
+<img alt="correct" src="readmeImgs/image5.png" width="200" height="200">
+
+next, we draw the original mask on top of the mask copy, but with kDrawModeXOR
+<img alt="correct" src="readmeImgs/image6.png" width="200" height="200">
+
+this is the final result, that we set back as the official image mask so playdate can properly draw it
+<img alt="correct" src="readmeImgs/image7.png" width="200" height="200">
