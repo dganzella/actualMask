@@ -24,7 +24,7 @@ although playdate SDK images support image masking with the method [setMaskImage
 
 ## solution
 
-let's start by having a simple stickman being drawn in front of a diagonal pattern
+let's start by having a simple 16x16 stickman being drawn in front of a diagonal pattern
 
 <img alt="stickman" src="readmeImgs/image8.png" width="200" height="200">
 
@@ -41,7 +41,7 @@ end
 
 <img alt="initialSituation" src="readmeImgs/image.png" width="200" height="200">
 
-Simple and clean. Now Lets try to add a mask to it that will cover only its head. Remember that white means draw, black means do not draw.
+Simple and clean. Now Lets try to add a mask to it that will cover only the top 8 rows of the stickman -- their head. Remember that white means draw, black means do not draw.
 
 <img alt="mask" src="readmeImgs/image9.png" width="200" height="200">
 
