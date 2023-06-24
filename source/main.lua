@@ -8,7 +8,6 @@ gfx = playdate.graphics
 
 gfx.sprite.setAlwaysRedraw(true)
 playdate.display.setRefreshRate(30)
-dt = 1 / playdate.display.getRefreshRate()
 
 img = gfx.image.new('assets/images/stickman')
 mask = gfx.image.new('assets/images/mask')
