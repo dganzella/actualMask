@@ -8,9 +8,11 @@ although playdate SDK images support image masking with the method [setMaskImage
 
 # solution
 
+let's start by having a simple stickman being drawn in front of a diagonal pattern
+
 ![stickman](readmeImgs/image8.png)
 
-let's start by having a simple stickman being drawn in front of a diagonal pattern
+<img src="readmeImgs/image8.pnge" width="100" height="100">
 
 ```lua
 img = gfx.image.new('assets/images/stickman')
