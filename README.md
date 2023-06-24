@@ -10,9 +10,7 @@ although playdate SDK images support image masking with the method [setMaskImage
 
 let's start by having a simple stickman being drawn in front of a diagonal pattern
 
-![stickman](readmeImgs/image8.png)
-
-<img src="readmeImgs/image8.png" width="100" height="100">
+<img alt="stickman" src="readmeImgs/image8.png" width="200" height="200">
 
 ```lua
 img = gfx.image.new('assets/images/stickman')
@@ -24,17 +22,20 @@ function playdate.update()
 end
 ```
 
-![initialSituation](readmeImgs/image.png)
+
+<img alt="initialSituation" src="readmeImgs/image.png" width="200" height="200">
 
 Simple and Clean. Now Lets try to add a mask to it that will cover only its head. remember that white means draw, black means do not draw.
 
-![mask](readmeImgs/image9.png)
+<img alt="mask" src="readmeImgs/image9" width="200" height="200">
+
 
 ```lua
 mask = gfx.image.new('assets/images/mask')
 img:setMaskImage(mask)
 ```
-![wtf](readmeImgs/image2.png)
+
+<img alt="wtf" src="readmeImgs/image2" width="200" height="200">
 
 So what happened? Although the body and feet from the stickman are not drawn as expected, there is now a black background to the head! We do not want that, since the source image did not have any pixels set there.
 
@@ -47,7 +48,7 @@ mask = gfx.image.new('assets/images/mask')
 setAnActualMaskToImage(img, mask)
 ```
 
-![correct](readmeImgs/image3.png)
+<img alt="correct" src="readmeImgs/image3" width="200" height="200">
 
 Awesome! this is how masks are supposed to work!
 
