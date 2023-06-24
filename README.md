@@ -6,7 +6,7 @@ adds the ability to set an actual image Mask on Playdate -- an image mask that b
 # problem
 although playdate SDK images support image masking with the method [setMaskImage][(https://didier.malenfant.net/toybox.py/)](https://sdk.play.date/inside-playdate/#m-graphics.image.setMaskImage), there seems to be a problem -- it will override the resulting masked-image with black even if the souce of the image is transparent
 
-# example of the problem: Stickman can't even have his head chopped out properly
+# solution
 
 ![stickman](readmeImgs/image8.png)
 
