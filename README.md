@@ -44,7 +44,7 @@ end
 
 <img alt="initialSituation" src="readmeImgs/image.png" width="200" height="200">
 
-Simple and Clean. Now Lets try to add a mask to it that will cover only its head. remember that white means draw, black means do not draw.
+Simple and clean. Now Lets try to add a mask to it that will cover only its head. remember that white means draw, black means do not draw.
 
 <img alt="mask" src="readmeImgs/image9.png" width="200" height="200">
 
