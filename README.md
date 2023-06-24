@@ -3,7 +3,7 @@ adds the ability to set an actual image Mask on Playdate -- an image mask that b
 
 (works similar to masking in unity/cocos/photoshop or any other software that has masks)
 
-# installation
+## installation
 
 just copy source/actualMask.lua in your project, or the code below
 
@@ -22,10 +22,10 @@ function setAnActualMaskToImage(image, mask)
 end
 ```
 
-# problem
+## problem
 although playdate SDK images support image masking with the method [setMaskImage](https://sdk.play.date/inside-playdate/#m-graphics.image.setMaskImage), there seems to be a problem -- it will override the resulting masked-image with black even if the souce of the image is transparent
 
-# solution
+## solution
 
 let's start by having a simple stickman being drawn in front of a diagonal pattern
 
@@ -71,4 +71,4 @@ setAnActualMaskToImage(img, mask)
 
 Awesome! this is how masks are supposed to work!
 
-# how Does actualMask work?
+## how Does actualMask work?
