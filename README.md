@@ -4,7 +4,7 @@ adds the ability to set an actual image Mask on Playdate -- an image mask that b
 (works similar to masking in unity/cocos/photoshop or any other software that has masks)
 
 # problem
-although playdate SDK images support image masking with the method [setMaskImage][(https://didier.malenfant.net/toybox.py/)](https://sdk.play.date/inside-playdate/#m-graphics.image.setMaskImage), there seems to be a problem -- it will override the resulting masked-image with black even if the souce of the image is transparent
+although playdate SDK images support image masking with the method [setMaskImage][(https://sdk.play.date/inside-playdate/#m-graphics.image.setMaskImage)], there seems to be a problem -- it will override the resulting masked-image with black even if the souce of the image is transparent
 
 # solution
 
