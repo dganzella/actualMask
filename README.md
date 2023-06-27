@@ -24,7 +24,15 @@ although playdate SDK images support image masking with the method [setMaskImage
 
 <img alt="logic" src="readmeImgs/logic.png" width="384" height="336">
 
-## solution
+## stencil
+
+one solution is to use [setStencilImage]((https://sdk.play.date/inside-playdate/#f-graphics.setStencilImage)) , but it has a few issues
+
+- It has a bug -- It will throw a size error if the stencil image has any transparency, while masks treat transparency same as black -- aka do not draw.
+- Stencils must be at least 32x32, which may make you create an entire separate imagetable library just for them, if your sprites are smaller. And because of the size difference, positioning offset may need to be manually added
+- If using sprites, I would need to override all drawing functions of all sprites that use images that have masks to use the stencil buffer, which would lead to more unecessary code
+
+## setAnActualMaskToImage
 
 let's start by having a simple 16x16 stickman being drawn in front of a diagonal pattern
 
