@@ -6,18 +6,14 @@ just copy source/actualMask.lua in your project, or the code below
 
 ```lua
 function setAnActualMaskToImage(image, mask)
-	local maskCopy = mask:copy()
-
-	gfx.pushContext(maskCopy)
-	gfx.setImageDrawMode(gfx.kDrawModeFillBlack)
-	image:draw(0, 0)
-	gfx.setImageDrawMode(gfx.kDrawModeXOR)
+	gfx.pushContext(image:getMaskImage())
+	gfx.setImageDrawMode(gfx.kDrawModeWhiteTransparent)
 	mask:draw(0, 0)
 	gfx.popContext()
-
-	image:setMaskImage(maskCopy)
 end
 ```
+
+Source: https://devforum.play.date/t/stencil-buffer-setstencilimage-throws-wrong-error-has-inconsistent-documentation/11877/9
 
 ## problem
 although playdate SDK images support image masking with the method [setMaskImage](https://sdk.play.date/inside-playdate/#m-graphics.image.setMaskImage), there seems to be a problem -- it will override the resulting masked-image with black even if the souce of the image is transparent
@@ -77,17 +73,3 @@ setAnActualMaskToImage(img, mask)
 <img alt="correct" src="readmeImgs/image3.png" width="200" height="200">
 
 Awesome! this is how masks are supposed to work!
-
-## how Does actualMask work?
-
-we begin by making a copy of the original mask, add it to a context in order to draw inside it, then draw the source image on it but with kDrawModeFillBlack, this is the resulting image
-
-<img alt="correct" src="readmeImgs/image5.png" width="200" height="200">
-
-next, we draw the original mask on top of the mask copy, but with kDrawModeXOR
-
-<img alt="correct" src="readmeImgs/image6.png" width="200" height="200">
-
-this is the final result, that we set back as the official image mask so playdate can properly draw it
-
-<img alt="correct" src="readmeImgs/image7.png" width="200" height="200">
